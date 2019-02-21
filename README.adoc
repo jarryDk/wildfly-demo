@@ -1,0 +1,88 @@
+= wildfly-demo
+
+Demo Wildfly
+
+
+Dagsorden
+
+- Rundt om bordet - hvem er hvem
+
+- Hvordan bruger DIBS Wildfly
+
+- Hvordan er Wildfly bygget op
+	* Moduler
+	*	Web Profile
+	* Full Profile
+
+- Demo tid
+	* simple-ping
+	* simple-ping-test
+	* replace-cfx (udskiftning af modul)
+
+- Wildfly vs. JBoss EAP
+	* Wildfly 14 - Java EE 8
+	* JBoss EAP 7.2 (Wildfly 14+) - Java EE 8
+	* Muligheder for support
+
+- Javan EE 8 MVC
+	* https://github.com/AdamBien/javaee8-mvc-sample[Java EE 8 MVC (JSR-371) Example]
+	* https://www.mvc-spec.org/[JSR 371: Model-View-Controller Specification]
+
+- Struts
+	* _"Apache Struts is a free, open-source, MVC framework for creating elegant, modern Java web applications.
+It favors convention over configuration, is extensible using a plugin architecture, and ships with plugins to support REST, AJAX and JSON."_
+	* hello-world-using-struts2
+
+- Spring Boot
+
+- Hvornår skal vi mødes igen
+
+== javaee8-essentials-archetype
+
+Byg archetype til Java EE projecter.
+
+[source,bash]
+----
+cd javaee8-essentials-archetype
+mvn clean install
+----
+
+== simple-ping
+
+[source,bash]
+----
+mvn archetype:generate -Dfilter=dk.jarry:javaee8-essentials-archetype
+----
+
+[source,bash]
+----
+mvn archetype:generate \
+	-DinteractiveMode=false \
+	-DarchetypeGroupId=dk.jarry \
+	-DarchetypeArtifactId=javaee8-essentials-archetype \
+	-DarchetypeVersion=0.0.1-SNAPSHOT \
+	-DgroupId=dk.jarry.wildfly.demo \
+	-DartifactId=simple-ping \
+	-Dversion=1.0-SNAPSHOT  \
+	-Dpackage=dk.jarry.wildfly.demo
+
+----
+
+http://localhost:8080/simple-ping/resources/ping[http://localhost:8080/simple-ping/resources/ping]
+
+== hello-world-using-struts2
+
+[source,bash]
+----
+mvn archetype:generate \
+	-DinteractiveMode=false \
+	-DarchetypeGroupId=dk.jarry \
+	-DarchetypeArtifactId=javaee8-essentials-archetype \
+	-DarchetypeVersion=0.0.1-SNAPSHOT \
+	-DgroupId=dk.jarry.wildfly.demo \
+	-DartifactId=hello-world-using-struts2 \
+	-Dversion=1.0-SNAPSHOT  \
+	-Dpackage=dk.jarry.wildfly.demo
+----
+
+http://localhost:8080/hello-world-using-struts2[http://localhost:8080/hello-world-using-struts2]

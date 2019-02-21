@@ -1,0 +1,1 @@
+= dk.jarry.wildfly.demo :: hello-world-using-struts2
