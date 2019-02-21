@@ -1,6 +1,6 @@
 
-# Created by https://www.gitignore.io/api/eclipse,netbeans
-# Edit at https://www.gitignore.io/?templates=eclipse,netbeans
+# Created by https://www.gitignore.io/api/eclipse,netbeans,maven
+# Edit at https://www.gitignore.io/?templates=eclipse,netbeans,maven
 
 ### Eclipse ###
 
@@ -72,6 +72,18 @@ local.properties
 
 .sts4-cache/
 
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
 ### NetBeans ###
 **/nbproject/private/
 **/nbproject/Makefile-*.mk
@@ -82,5 +94,4 @@ dist/
 nbdist/
 .nb-gradle/
 
-# End of https://www.gitignore.io/api/eclipse,netbeans
-
+# End of https://www.gitignore.io/api/eclipse,netbeans,maven
