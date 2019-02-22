@@ -37,7 +37,7 @@
 									<Build-Java>${java.version}</Build-Java>
 									<Build-OS>${os.name}</Build-OS>
 									<Build-Label>Version: ${project.version} Revision: ${buildNumber}</Build-Label>
-									<Dependencies>org.apache.log4j2</Dependencies>
+									<Dependencies>org.apache.logging.log4j2</Dependencies>
 								</manifestEntries>
 							</archive>
 						</configuration>
