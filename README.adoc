@@ -2,40 +2,12 @@
 
 Demo Wildfly
 
+[source,bash]
+----
+export WILDFLY_HOME=/opt/redhat/wildfly/wildfly-15.0.1.Final
+export WILDFLY_DEMO_HOME=~/git/jarryDK/wildfly-demo
+----
 
-Dagsorden
-
-- Rundt om bordet - hvem er hvem
-
-- Hvordan bruger DIBS Wildfly
-
-- Hvordan er Wildfly bygget op
-	* Moduler
-	*	Web Profile
-	* Full Profile
-
-- Demo tid
-	* simple-ping
-	* simple-ping-test
-	* replace-cfx (udskiftning af modul)
-
-- Wildfly vs. JBoss EAP
-	* Wildfly 14 - Java EE 8
-	* JBoss EAP 7.2 (Wildfly 14+) - Java EE 8
-	* Muligheder for support
-
-- Javan EE 8 MVC
-	* https://github.com/AdamBien/javaee8-mvc-sample[Java EE 8 MVC (JSR-371) Example]
-	* https://www.mvc-spec.org/[JSR 371: Model-View-Controller Specification]
-
-- Struts
-	* _"Apache Struts is a free, open-source, MVC framework for creating elegant, modern Java web applications.
-It favors convention over configuration, is extensible using a plugin architecture, and ships with plugins to support REST, AJAX and JSON."_
-	* hello-world-using-struts2
-
-- Spring Boot
-
-- Hvornår skal vi mødes igen
 
 == javaee8-essentials-archetype
 
@@ -43,6 +15,7 @@ Byg archetype til Java EE projecter.
 
 [source,bash]
 ----
+cd $WILDFLY_DEMO_HOME
 cd javaee8-essentials-archetype
 mvn clean install
 ----
@@ -51,11 +24,15 @@ mvn clean install
 
 [source,bash]
 ----
+cd $WILDFLY_DEMO_HOME
 mvn archetype:generate -Dfilter=dk.jarry:javaee8-essentials-archetype
 ----
 
+*or*
+
 [source,bash]
 ----
+cd $WILDFLY_DEMO_HOME
 mvn archetype:generate \
 	-DinteractiveMode=false \
 	-DarchetypeGroupId=dk.jarry \
@@ -68,9 +45,71 @@ mvn archetype:generate \
 
 ----
 
+[source,bash]
+----
+cd $WILDFLY_DEMO_HOME
+cd simple-ping
+mvn clean package
+cp target/simple-ping.war $WILDFLY_HOME/standalone/deployments/simple-ping.war
+----
+
 http://localhost:8080/simple-ping/resources/ping[http://localhost:8080/simple-ping/resources/ping]
 
-== hello-world-using-struts2
+== simple-ping-test
+
+link:simple-ping-test/README.adoc[simple-ping-test/README.adoc]
+
+[source,bash]
+----
+cd $WILDFLY_DEMO_HOME
+cd simple-ping-test
+mvn clean package
+cp target/simple-ping-test.war $WILDFLY_HOME/standalone/deployments/simple-ping-test.war
+----
+
+http://localhost:8080/simple-ping-test/resources/ping[http://localhost:8080/simple-ping-test/resources/ping]
+
+== simple-ping-modul-dependencies
+
+link:simple-ping-modul-dependencies/README.adoc[simple-ping-modul-dependencies/README.adoc]
+
+[source,bash]
+----
+cd $WILDFLY_DEMO_HOME
+cd simple-ping-modul-dependencies
+mvn clean package
+cp target/simple-ping-modul-dependencies.war $WILDFLY_HOME/standalone/deployments/simple-ping-modul-dependencies.war
+----
+
+http://localhost:8080/simple-ping-modul-dependencies/resources/ping[http://localhost:8080/simple-ping-modul-dependencies/resources/ping]
+
+== simple-ping-modul-jboss-xml
+
+link:simple-ping-modul-jboss-xml/README.adoc[simple-ping-modul-jboss-xml/README.adoc]
+
+[source,bash]
+----
+cd $WILDFLY_DEMO_HOME
+cd simple-ping-modul-jboss-xml
+mvn clean package
+cp target/simple-ping-modul-jboss-xml.war $WILDFLY_HOME/standalone/deployments/simple-ping-modul-jboss-xml.war
+----
+
+http://localhost:8080/simple-ping-modul-jboss-xml/resources/ping[http://localhost:8080/simple-ping-modul-jboss-xml/resources/ping]
+
+== replace-cfx
+
+link:replace-cfx/README.adoc[replace-cfx/README.adoc]
+
+[source,bash]
+----
+cd $WILDFLY_DEMO_HOME
+cd replace-cfx
+mvn clean package
+cp target/replace-cfx.war $WILDFLY_HOME/standalone/deployments/replace-cfx.war
+----
+
+== simple-hello-world-using-struts2
 
 [source,bash]
 ----
@@ -80,9 +119,17 @@ mvn archetype:generate \
 	-DarchetypeArtifactId=javaee8-essentials-archetype \
 	-DarchetypeVersion=0.0.1-SNAPSHOT \
 	-DgroupId=dk.jarry.wildfly.demo \
-	-DartifactId=hello-world-using-struts2 \
+	-DartifactId=simple-hello-world-using-struts2 \
 	-Dversion=1.0-SNAPSHOT  \
 	-Dpackage=dk.jarry.wildfly.demo
 ----
 
-http://localhost:8080/hello-world-using-struts2[http://localhost:8080/hello-world-using-struts2]
+[source,bash]
+----
+cd $WILDFLY_DEMO_HOME
+cd simple-hello-world-using-struts2
+mvn clean package
+cp target/simple-hello-world-using-struts2.war $WILDFLY_HOME/standalone/deployments/simple-hello-world-using-struts2.war
+----
+
+http://localhost:8080/simple-hello-world-using-struts2[http://localhost:8080/simple-hello-world-using-struts2]

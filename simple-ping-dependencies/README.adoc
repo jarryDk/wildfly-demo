@@ -1,1 +1,0 @@
-= dk.jarry.wildfly.demo :: simple-ping-dependencies

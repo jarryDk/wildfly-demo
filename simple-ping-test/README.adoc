@@ -1,0 +1,51 @@
+= dk.jarry.wildfly.demo :: simple-ping-test
+
+We create a project and use
+
+- org.codehaus.jackson
+- com.fasterxml.jackson
+- org.jboss.resteasy
+
+to test our API with the same implementations as Wildfly use.
+
+[source,xml]
+----
+<!-- TEST START -->
+<dependency>
+  <groupId>org.junit.jupiter</groupId>
+  <artifactId>junit-jupiter-api</artifactId>
+  <version>${junit.jupiter.version}</version>
+  <scope>test</scope>
+</dependency>
+<dependency>
+  <groupId>org.junit.jupiter</groupId>
+  <artifactId>junit-jupiter-params</artifactId>
+  <version>${junit.jupiter.version}</version>
+  <scope>test</scope>
+</dependency>
+<dependency>
+  <groupId>org.junit.jupiter</groupId>
+  <artifactId>junit-jupiter-engine</artifactId>
+  <version>${junit.jupiter.version}</version>
+  <scope>test</scope>
+</dependency>
+<dependency>
+  <groupId>org.jboss.resteasy</groupId>
+  <artifactId>resteasy-client</artifactId>
+  <version>${version.org.jboss.resteasy}</version>
+  <scope>test</scope>
+</dependency>
+<dependency>
+  <groupId>org.jboss.resteasy</groupId>
+  <artifactId>resteasy-jaxb-provider</artifactId>
+  <version>${version.org.jboss.resteasy}</version>
+  <scope>test</scope>
+</dependency>
+<dependency>
+  <groupId>org.jboss.resteasy</groupId>
+  <artifactId>resteasy-jackson-provider</artifactId>
+  <version>${version.org.jboss.resteasy}</version>
+  <scope>test</scope>
+</dependency>
+<!-- TEST END -->
+----
