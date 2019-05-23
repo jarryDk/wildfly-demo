@@ -29,7 +29,7 @@ public class Producer {
 		System.err.println("cacheExists : " + container.cacheExists("simple-infinispan.war"));
 		System.err.println("ClusterNames [1] : " + Arrays.asList(container.getCacheNames())); 
 		
-		cache = container.getCache("default-server", true);
+		cache = container.getCache("simple-infinispan.war", true);
 
 		System.err.println("ClusterNames [2] : " + Arrays.asList(container.getCacheNames())); 
 		
