@@ -1,0 +1,7 @@
+= dk.jarry.wildfly.demo
+
+== Links
+
+- https://developer.jboss.org/thread/277425?start=15&tstart=0[developer.jboss.org - Wildfly 12 Cache migration error]
+- http://www.mastertheboss.com/jboss-frameworks/infinispan/using-infinispan-with-wildfly-8[mastertheboss.com - Using Infinispan with WildFly ]
+- http://www.mastertheboss.com/jboss-frameworks/infinispan/monitoring-wildfly-s-infinispan-caches[mastertheboss.com - Monitoring WildFly's Infinispan caches ]
