@@ -45,7 +45,7 @@ public class MyGroupListener implements GroupListener {
         if (!joiners.isEmpty()) {
             System.out.println("Welcome: " + joiners);
         }
-        
+
         List<Node> leavers = previousMembers.stream() //
         		.filter(member -> !currentMembers.contains(member)) //
         		.collect(Collectors.toList());
