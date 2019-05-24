@@ -8,6 +8,27 @@ export WILDFLY_HOME=/opt/redhat/wildfly/wildfly-15.0.1.Final
 export WILDFLY_DEMO_HOME=~/git/jarryDK/wildfly-demo
 ----
 
+== Debug
+
+https://visualvm.github.io/download.html[VisualVM]
+
+[source,bash]
+----
+$JAVA_HOME/bin/jconsole
+----
+
+https://download.oracle.com/technology/products/missioncontrol/updatesites/base/6.0.0/eclipse/[Java Mission Control - eclipse]
+
+https://hawt.io/docs/get-started/[Hawtio]
+-	https://oss.sonatype.org/content/repositories/public/io/hawt/hawtio-wildfly/2.6.0/hawtio-wildfly-2.6.0.war[hawtio-wildfly-2.6.0.war]
+
+*Disable security*
+[source,xml]
+----
+<system-properties>
+    <property name="hawtio.authenticationEnabled" value="false" />
+</system-properties>
+----
 
 == javaee8-essentials-archetype
 
@@ -133,3 +154,9 @@ cp target/simple-hello-world-using-struts2.war $WILDFLY_HOME/standalone/deployme
 ----
 
 http://localhost:8080/simple-hello-world-using-struts2[http://localhost:8080/simple-hello-world-using-struts2]
+
+== simple-infinispan
+
+Use Infinispana as JCACHE https://jcp.org/en/jsr/detail?id=107[JSR 107]
+
+link:replace-cfx/README.adoc[simple-infinispan/README.adoc]

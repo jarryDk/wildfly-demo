@@ -4,4 +4,10 @@
 
 - https://developer.jboss.org/thread/277425?start=15&tstart=0[developer.jboss.org - Wildfly 12 Cache migration error]
 - http://www.mastertheboss.com/jboss-frameworks/infinispan/using-infinispan-with-wildfly-8[mastertheboss.com - Using Infinispan with WildFly ]
-- http://www.mastertheboss.com/jboss-frameworks/infinispan/monitoring-wildfly-s-infinispan-caches[mastertheboss.com - Monitoring WildFly's Infinispan caches ]
+- http://www.mastertheboss.com/jboss-frameworks/infinispan/monitoring-wildfly-s-infinispan-caches[mastertheboss.com - Monitoring WildFly's Infinispan caches]
+
+- https://github.com/serhat-dirik/jboss-generic-http-session-externalization-to-jdg[Http Session Externalization & Sharing on JBoss Data Grid]
+
+- https://developer.jboss.org/thread/254200[HTTP Session Replication - org.infinispan.util.concurrent.TimeoutException]
+- https://stackoverflow.com/questions/27569661/keeping-http-session-between-redeploys-in-wildfly[Keeping HTTP session between redeploys in WildFly]
+	* http://blog.chris-ritchie.com/2014/07/save-session-state-between-redeploys.html[Save Session State Between Redeploys - Developing on WildFly]
