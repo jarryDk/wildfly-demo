@@ -1,4 +1,6 @@
 = wildfly-demo
+Michael Bornholdt Nielsen <michaelbornholdtnielsen@gmail.com>
+:toc:
 
 Demo Wildfly
 
@@ -10,19 +12,19 @@ export WILDFLY_DEMO_HOME=~/git/jarryDK/wildfly-demo
 
 == Debug
 
-https://visualvm.github.io/download.html[VisualVM]
+- https://visualvm.github.io/download.html[VisualVM]
 
 [source,bash]
 ----
 $JAVA_HOME/bin/jconsole
 ----
 
-https://download.oracle.com/technology/products/missioncontrol/updatesites/base/6.0.0/eclipse/[Java Mission Control - eclipse]
+- https://download.oracle.com/technology/products/missioncontrol/updatesites/base/6.0.0/eclipse/[Java Mission Control - eclipse]
 
-https://hawt.io/docs/get-started/[Hawtio]
--	https://oss.sonatype.org/content/repositories/public/io/hawt/hawtio-wildfly/2.6.0/hawtio-wildfly-2.6.0.war[hawtio-wildfly-2.6.0.war]
+- https://hawt.io/docs/get-started/[Hawtio]
+	* https://oss.sonatype.org/content/repositories/public/io/hawt/hawtio-wildfly/2.6.0/hawtio-wildfly-2.6.0.war[hawtio-wildfly-2.6.0.war]
 
-*Disable security*
+.Disable security for hawtio
 [source,xml]
 ----
 <system-properties>
